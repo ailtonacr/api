@@ -4,9 +4,8 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.responses import JSONResponse
 from dotenv import load_dotenv
 import os
-from auth.session_manager import SessionManager
-from auth.auth import AuthHandler
-from db.db_operations import DBOperations
+from src.auth import AuthHandler, SessionManager
+from src.db.db_operations import DBOperations
 
 load_dotenv()
 
