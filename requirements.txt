@@ -1,7 +1,8 @@
-fastapi
+fastapi~=0.111.1
 uvicorn
-mysql-connector-python
+mysql-connector-python~=9.0.0
 itsdangerous
-python-dotenv
-msal
+python-dotenv~=1.0.1
+msal~=1.30.0
 pydantic
+starlette~=0.37.2
