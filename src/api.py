@@ -4,13 +4,12 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.responses import JSONResponse
 from dotenv import load_dotenv
 import os
-from auth.session_manager import SessionManager
-from auth.auth import AuthHandler
-from db.db_operations import DBOperations
+from auth import AuthHandler, SessionManager
+from database import DBOperations
 
 load_dotenv()
 
-app = FastAPI(docs_url=None, redoc_url=None)
+app = FastAPI(docs_url=None, redoc_url=None, favicon=None)
 app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY"), max_age=None)
 
 auth_handler = AuthHandler()

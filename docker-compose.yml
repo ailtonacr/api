@@ -1,0 +1,12 @@
+version: '3'
+services:
+    python-api:
+        env_file:
+            - .env
+        build:
+            context: .
+            target: local
+        ports:
+            - "8000:8000"
+        volumes:
+            - "./src:/api"
